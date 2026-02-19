@@ -4,11 +4,10 @@ public class Books {
 	int bookId;
 	String title;
 	String author;
-	static int price;
+	int price;
 
-	static double discountPrice() {
-		double dp = price - (price * 0.1);
-		return dp;
+	double discountPrice() {
+		return price - (price * 0.1);
 	}
 
 	void PrintStatements() {
@@ -25,7 +24,15 @@ public class Books {
 		a1.title = "Pride and Prejudice";
 		a1.author = "Jane Austen";
 		a1.price = 500;
+
+		Books a2 = new Books();
+		a2.bookId = 11;
+		a2.title = "The Alchemist ";
+		a2.author = "Paulo Coelho";
+		a2.price = 600;
+
 		a1.PrintStatements();
+		a2.PrintStatements();
 	}
 
 }

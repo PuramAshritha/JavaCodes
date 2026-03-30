@@ -4,7 +4,7 @@ public class Employee {
 	String ename;
 	double basicSalary;
 
-	Employee(double basicSalary) {
+	Employee(String ename, double basicSalary) {
 		this.basicSalary = basicSalary;
 	}
 
@@ -24,12 +24,11 @@ public class Employee {
 	}
 
 	public static void main(String[] args) {
-		Employee e1 = new Employee(50000.0);
-		e1.ename = "Ashritha";
+		Employee e1 = new Employee("Ashritha", 50000.0);
+
 		e1.displaySalarySlip();
 
-		Employee e2 = new Employee(80000.0);
-		e2.ename = "Laxmi";
+		Employee e2 = new Employee("Laxmi", 80000.0);
 		e2.displaySalarySlip();
 	}
 

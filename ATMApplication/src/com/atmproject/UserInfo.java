@@ -1,10 +1,10 @@
 package com.atmproject;
 
 public class UserInfo {
-     int accountNumber;
-     String userName;
-     int pin;
-     double balance;
+     private int accountNumber;
+     private String userName;
+     private int pin;
+     private double balance;
 	 public int getAccountNumber() {
 		 return accountNumber;
 	 }

@@ -25,6 +25,10 @@ public class AtmMain {
 				break;
 			}
 		}
+		if (!status) {
+		    System.out.println("Invalid Account Number or PIN");
+		    return;
+		}
 		System.out.println(u1.getUserName() + " Welcome to Our Bank");
 		AtmImplementsInterface atm = new AtmImplementsInterface(u1);
 		while (status) {
@@ -35,8 +39,9 @@ public class AtmMain {
 			case 1 -> atm.checkBalance();
 			case 2 -> atm.withdraw();
 			case 3 -> atm.deposit();
-			case 4 -> atm.Exit();
-			case 5 -> {
+			case 4 -> atm.pin();
+			case 5 -> atm.Exit();
+			case 6 -> {
 				status = false;
 				System.out.println("Thanks for using Our Servies");
 			}

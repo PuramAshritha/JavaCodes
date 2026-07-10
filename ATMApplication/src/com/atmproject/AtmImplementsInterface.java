@@ -20,6 +20,10 @@ public class AtmImplementsInterface implements ATMInterface {
 	public void withdraw() {
 		System.out.println("Enter the amount to withdraw: ");
 		double amount = sc.nextDouble();
+		if(amount<=0){
+		    System.out.println("Invalid Amount");
+		    return;
+		}
 		if (amount > u1.getBalance()) {
 			System.out.println("Insuficient Balance!!!");
 		} else {
@@ -34,6 +38,10 @@ public class AtmImplementsInterface implements ATMInterface {
 	public void deposit() {
 		System.out.println("Enter the amount to deposit: ");
 		double amount = sc.nextDouble();
+		if(amount<=0){
+		    System.out.println("Invalid Amount");
+		    return;
+		}
 		double balance = u1.getBalance();
 		balance = balance + amount;
 		u1.setBalance(balance);
@@ -56,7 +64,7 @@ public class AtmImplementsInterface implements ATMInterface {
 
 	@Override
 	public void Exit() {
-
+		 System.out.println("Thank you for using our ATM.");
 	}
 
 }
